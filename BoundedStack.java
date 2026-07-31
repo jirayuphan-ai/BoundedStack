@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class BoundedStack {
 
     /*  
@@ -8,6 +9,7 @@ public class BoundedStack {
       AF(items, capacity) = สแตกที่มีสมาชิกคือสมาชิกทั้งหมดใน items 
       โดยยอด Stack อยู่ที่ items.get(0)
       เเละยอด Stack (ตัวบนสุด) อยู่ที่ items.get(items.size() - 1)
+
 
       Representation Invariant:
         - items != null;
@@ -27,6 +29,7 @@ public class BoundedStack {
         checkRep();
     }
 
+    //เช็คค่าว่าเป็น null, < 0, <=0
     private void checkRep() {
         if (items == null) {
         throw new AssertionError("items == null");
@@ -69,7 +72,6 @@ public class BoundedStack {
         checkRep();
         return top;
     }
-
 
     /**
      * @throws IllegalStateException เมื่อค่าว่าง
@@ -114,4 +116,6 @@ public class BoundedStack {
         return stack;
     }
 
+
 }
+
